@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        @apply h-screen w-screen bg-white font-family-urbane;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-bold;
+    }
+
+    h4,
+    strong {
+        @apply text-base;
+    }
+
+    h5,
+    p {
+        @apply text-sm;
+    }
+
+    h6,
+    small {
+        @apply text-xs;
+    }
+}
+
+@layer components {
+    .col {
+        @apply flex flex-col;
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .full-size {
+        @apply w-full h-full;
+    }
+
+    .row {
+        @apply flex;
+    }
+}
+
+@theme {
+    --color-primary: #1AA584;
+    --color-primary-100: #D1EDE6;
+    --color-primary-400: #DCF8B1;
+    --color-primary-500: #48B79D;
+
+    --font-family-urbane: var(--font-urbane), ui-sans-serif, system-ui, sans-serif;
+}
