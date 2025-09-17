@@ -45,8 +45,8 @@ const urbane = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Liva",
-  description: "Liva",
+  title: "Liva - Home",
+  description: "Liva - Agende agora com um dos nossos consultores e realize seu sonho!",
 };
 
 export default function RootLayout({
