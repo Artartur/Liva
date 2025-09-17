@@ -4,7 +4,10 @@ import { useState } from "react";
 export default function Enterprises() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   return (
-    <section className="px-5 py-14 space-y-5">
+    <section
+      id="enterprises"
+      className="px-5 py-14 space-y-5"
+    >
       <h2 className="font-light">
         Confira todos os <br />
         <span className="text-primary font-semibold">empreendimentos <br />

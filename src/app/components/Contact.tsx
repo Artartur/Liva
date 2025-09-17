@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <section className="px-5 pt-14 pb-12 space-y-5 bg-[#03110D]">
+    <section
+      id="contact"
+      className="px-5 pt-14 pb-12 space-y-5 bg-[#03110D]"
+    >
       <h2 className="text-white text-[28px] font-semibold">
         Fale agora <br />
         com um consultor <br />

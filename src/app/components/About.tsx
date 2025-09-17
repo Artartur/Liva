@@ -1,7 +1,10 @@
 
 export default function About() {
   return (
-    <section className="px-5 py-14 space-y-6 bg-white">
+    <section
+      id="about"
+      className="px-5 py-14 space-y-6 bg-white"
+    >
       <h2 className="text-[28px] font-light">
         Construimos <br />
         confiança e <br />
