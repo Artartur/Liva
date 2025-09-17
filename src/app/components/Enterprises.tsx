@@ -56,74 +56,128 @@ export default function Enterprises() {
   return (
     <section
       id="enterprises"
-      className="px-5 pt-14 pb-10 space-y-5"
+      className="px-5 pt-14 pb-10"
     >
-      <h2 className="font-light">
-        Confira todos os <br />
-        <span className="text-primary font-semibold">empreendimentos <br />
-          da Liva
-        </span>
-      </h2>
-      <div>
-        <button
-          className={`flex-center full-size h-12 space-x-2 text-sm font-medium rounded-sm
-          ${isFilterOpen ?
-              'bg-white text-black border-2' :
-              'text-white bg-black'
-            }
-          `}
-          onClick={() => setIsFilterOpen(!isFilterOpen)}
-        >
-          {isFilterOpen ? (
-            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16.6493 3.14934L15.8506 2.35059L9.49996 8.70684L3.14934 2.35059L2.35059 3.14934L8.70684 9.49996L2.35059 15.8506L3.14934 16.6493L9.49996 10.2931L15.8506 16.6493L16.6493 15.8506L10.2931 9.49996L16.6493 3.14934Z" fill="black" stroke="black" />
-            </svg>
-          ) : (
-            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6712 5.00003L17.375 5.00003L17.375 3.87503L11.6712 3.87503C11.5417 3.39838 11.2589 2.9776 10.8665 2.67761C10.4741 2.37762 9.99393 2.21509 9.5 2.21509C9.00607 2.21509 8.52586 2.37762 8.13346 2.67761C7.74106 2.9776 7.45828 3.39838 7.32875 3.87503L1.625 3.87502L1.625 5.00002L7.32875 5.00003C7.45828 5.47667 7.74106 5.89745 8.13346 6.19744C8.52586 6.49743 9.00607 6.65996 9.5 6.65996C9.99393 6.65996 10.4741 6.49743 10.8665 6.19744C11.2589 5.89745 11.5417 5.47667 11.6712 5.00003ZM8.375 4.43753C8.375 4.21502 8.44098 3.99751 8.5646 3.81251C8.68821 3.6275 8.86391 3.48331 9.06948 3.39816C9.27505 3.31301 9.50125 3.29073 9.71948 3.33414C9.9377 3.37755 10.1382 3.4847 10.2955 3.64203C10.4528 3.79936 10.56 3.99982 10.6034 4.21805C10.6468 4.43628 10.6245 4.66248 10.5394 4.86804C10.4542 5.07361 10.31 5.24931 10.125 5.37293C9.94001 5.49654 9.7225 5.56253 9.5 5.56253C9.20163 5.56253 8.91548 5.444 8.7045 5.23302C8.49353 5.02204 8.375 4.73589 8.375 4.43753Z" fill="white" />
-              <path d="M7.17125 10.0625L17.375 10.0625L17.375 8.93753L7.17125 8.93753C7.04172 8.46088 6.75894 8.0401 6.36654 7.74011C5.97414 7.44012 5.49393 7.27759 5 7.27759C4.50607 7.27759 4.02586 7.44012 3.63346 7.74011C3.24106 8.0401 2.95828 8.46088 2.82875 8.93752L1.625 8.93752L1.625 10.0625L2.82875 10.0625C2.95828 10.5392 3.24106 10.9599 3.63346 11.2599C4.02586 11.5599 4.50607 11.7225 5 11.7225C5.49393 11.7225 5.97414 11.5599 6.36654 11.2599C6.75894 10.9599 7.04172 10.5392 7.17125 10.0625ZM3.875 9.50002C3.875 9.27752 3.94098 9.06001 4.0646 8.87501C4.18821 8.69 4.36391 8.54581 4.56948 8.46066C4.77505 8.37551 5.00125 8.35323 5.21948 8.39664C5.4377 8.44005 5.63816 8.5472 5.79549 8.70453C5.95283 8.86186 6.05998 9.06232 6.10338 9.28055C6.14679 9.49878 6.12451 9.72498 6.03936 9.93054C5.95422 10.1361 5.81002 10.3118 5.62502 10.4354C5.44001 10.559 5.2225 10.625 5 10.625C4.70163 10.625 4.41548 10.5065 4.2045 10.2955C3.99353 10.0845 3.875 9.79839 3.875 9.50002Z" fill="white" />
-              <path d="M14 16.8125C14.4976 16.8109 14.9806 16.6444 15.3734 16.3391C15.7663 16.0337 16.0469 15.6068 16.1712 15.125L17.375 15.125L17.375 14L16.1713 14C16.0417 13.5234 15.7589 13.1026 15.3665 12.8026C14.9741 12.5026 14.4939 12.3401 14 12.3401C13.5061 12.3401 13.0259 12.5026 12.6335 12.8026C12.2411 13.1026 11.9583 13.5234 11.8288 14L1.625 14L1.625 15.125L11.8288 15.125C11.9531 15.6068 12.2337 16.0337 12.6266 16.3391C13.0194 16.6444 13.5024 16.8109 14 16.8125ZM12.875 14.5625C12.875 14.34 12.941 14.1225 13.0646 13.9375C13.1882 13.7525 13.3639 13.6083 13.5695 13.5232C13.775 13.438 14.0012 13.4157 14.2195 13.4591C14.4377 13.5026 14.6382 13.6097 14.7955 13.767C14.9528 13.9244 15.06 14.1248 15.1034 14.343C15.1468 14.5613 15.1245 14.7875 15.0394 14.993C14.9542 15.1986 14.81 15.3743 14.625 15.4979C14.44 15.6215 14.2225 15.6875 14 15.6875C13.7016 15.6875 13.4155 15.569 13.2045 15.358C12.9935 15.147 12.875 14.8609 12.875 14.5625Z" fill="white" />
-            </svg>
-          )}
-
-          <span>FILTROS</span>
-        </button>
-      </div>
-      <div>
-        <div className="space-y-6">
-          {imagesToShow.map((item, index) => (
-            <div
-              key={item.label}
-            >
-              {index === 1 && (
-                <button
-                  className="absolute w-[140px] h-[42px] bg-white rounded-sm text-xs -mt-[166px] ms-6 cursor-pointer"
-                  type="button"
-                >
-                  PRÉ LANÇAMENTO
-                </button>
-              )}
-              <Image
-                className="w-full rounded-sm"
-                src={item.src}
-                alt="images"
-                width={310}
-                height={0}
-              />
-              <p className="absolute text-base text-white font-medium -mt-22 ms-6">{item.label}</p>
+      <div className="col xl:items-center xl:justify-center xl:max-w-[1200px] xl:mx-auto xl:space-y-5">
+        <div className="col space-y-5 mb-5 xl:flex-row xl:items-center xl:justify-between xl:w-full xl:px-5">
+          <h2 className="font-light">
+            <div className="block xl:hidden">
+              Confira todos os <br />
+              <span className="text-primary font-semibold">empreendimentos <br />
+                da Liva
+              </span>
             </div>
-          ))}
-        </div>
-        {images.length > initialCount && (
-          <div className="flex-center mt-10">
+            <div className="hidden xl:block xl:text-4xl">
+              Confira todos os <br />
+              <span className="text-primary font-semibold">empreendimentos da Liva</span>
+            </div>
+          </h2>
+          <div>
             <button
-              onClick={showAllImages}
-              className="w-44 h-11 font-medium rounded-sm border-2 border-[#9F9F9F] text-[#A0A0A0] text-sm"
+              className={`flex-center full-size h-12 space-x-2 text-sm font-medium rounded-sm xl:w-[147px]
+              ${isFilterOpen ?
+                  'bg-white text-black border-2' :
+                  'text-white bg-black'
+                }
+              `}
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
             >
-              {showAll ? 'Ver Menos' : `CARREGAR MAIS`}
+              {isFilterOpen ? (
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.6493 3.14934L15.8506 2.35059L9.49996 8.70684L3.14934 2.35059L2.35059 3.14934L8.70684 9.49996L2.35059 15.8506L3.14934 16.6493L9.49996 10.2931L15.8506 16.6493L16.6493 15.8506L10.2931 9.49996L16.6493 3.14934Z" fill="black" stroke="black" />
+                </svg>
+              ) : (
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6712 5.00003L17.375 5.00003L17.375 3.87503L11.6712 3.87503C11.5417 3.39838 11.2589 2.9776 10.8665 2.67761C10.4741 2.37762 9.99393 2.21509 9.5 2.21509C9.00607 2.21509 8.52586 2.37762 8.13346 2.67761C7.74106 2.9776 7.45828 3.39838 7.32875 3.87503L1.625 3.87502L1.625 5.00002L7.32875 5.00003C7.45828 5.47667 7.74106 5.89745 8.13346 6.19744C8.52586 6.49743 9.00607 6.65996 9.5 6.65996C9.99393 6.65996 10.4741 6.49743 10.8665 6.19744C11.2589 5.89745 11.5417 5.47667 11.6712 5.00003ZM8.375 4.43753C8.375 4.21502 8.44098 3.99751 8.5646 3.81251C8.68821 3.6275 8.86391 3.48331 9.06948 3.39816C9.27505 3.31301 9.50125 3.29073 9.71948 3.33414C9.9377 3.37755 10.1382 3.4847 10.2955 3.64203C10.4528 3.79936 10.56 3.99982 10.6034 4.21805C10.6468 4.43628 10.6245 4.66248 10.5394 4.86804C10.4542 5.07361 10.31 5.24931 10.125 5.37293C9.94001 5.49654 9.7225 5.56253 9.5 5.56253C9.20163 5.56253 8.91548 5.444 8.7045 5.23302C8.49353 5.02204 8.375 4.73589 8.375 4.43753Z" fill="white" />
+                  <path d="M7.17125 10.0625L17.375 10.0625L17.375 8.93753L7.17125 8.93753C7.04172 8.46088 6.75894 8.0401 6.36654 7.74011C5.97414 7.44012 5.49393 7.27759 5 7.27759C4.50607 7.27759 4.02586 7.44012 3.63346 7.74011C3.24106 8.0401 2.95828 8.46088 2.82875 8.93752L1.625 8.93752L1.625 10.0625L2.82875 10.0625C2.95828 10.5392 3.24106 10.9599 3.63346 11.2599C4.02586 11.5599 4.50607 11.7225 5 11.7225C5.49393 11.7225 5.97414 11.5599 6.36654 11.2599C6.75894 10.9599 7.04172 10.5392 7.17125 10.0625ZM3.875 9.50002C3.875 9.27752 3.94098 9.06001 4.0646 8.87501C4.18821 8.69 4.36391 8.54581 4.56948 8.46066C4.77505 8.37551 5.00125 8.35323 5.21948 8.39664C5.4377 8.44005 5.63816 8.5472 5.79549 8.70453C5.95283 8.86186 6.05998 9.06232 6.10338 9.28055C6.14679 9.49878 6.12451 9.72498 6.03936 9.93054C5.95422 10.1361 5.81002 10.3118 5.62502 10.4354C5.44001 10.559 5.2225 10.625 5 10.625C4.70163 10.625 4.41548 10.5065 4.2045 10.2955C3.99353 10.0845 3.875 9.79839 3.875 9.50002Z" fill="white" />
+                  <path d="M14 16.8125C14.4976 16.8109 14.9806 16.6444 15.3734 16.3391C15.7663 16.0337 16.0469 15.6068 16.1712 15.125L17.375 15.125L17.375 14L16.1713 14C16.0417 13.5234 15.7589 13.1026 15.3665 12.8026C14.9741 12.5026 14.4939 12.3401 14 12.3401C13.5061 12.3401 13.0259 12.5026 12.6335 12.8026C12.2411 13.1026 11.9583 13.5234 11.8288 14L1.625 14L1.625 15.125L11.8288 15.125C11.9531 15.6068 12.2337 16.0337 12.6266 16.3391C13.0194 16.6444 13.5024 16.8109 14 16.8125ZM12.875 14.5625C12.875 14.34 12.941 14.1225 13.0646 13.9375C13.1882 13.7525 13.3639 13.6083 13.5695 13.5232C13.775 13.438 14.0012 13.4157 14.2195 13.4591C14.4377 13.5026 14.6382 13.6097 14.7955 13.767C14.9528 13.9244 15.06 14.1248 15.1034 14.343C15.1468 14.5613 15.1245 14.7875 15.0394 14.993C14.9542 15.1986 14.81 15.3743 14.625 15.4979C14.44 15.6215 14.2225 15.6875 14 15.6875C13.7016 15.6875 13.4155 15.569 13.2045 15.358C12.9935 15.147 12.875 14.8609 12.875 14.5625Z" fill="white" />
+                </svg>
+              )}
+
+              <span>FILTROS</span>
             </button>
           </div>
-        )}
+        </div>
+        <div>
+          <div className="space-y-6 xl:hidden">
+            {imagesToShow.map((item, index) => (
+              <div
+                key={item.label}
+              >
+                {index === 1 && (
+                  <button
+                    className="absolute w-[140px] h-[42px] bg-white rounded-sm text-xs -mt-[166px] ms-6 cursor-pointer"
+                    type="button"
+                  >
+                    PRÉ LANÇAMENTO
+                  </button>
+                )}
+                <Image
+                  className="w-full rounded-sm"
+                  src={item.src}
+                  alt="images"
+                  width={310}
+                  height={0}
+                />
+                <p className="absolute text-base text-white font-medium -mt-22 ms-6">{item.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden xl:grid xl:grid-cols-4 xl:grid-rows-3 xl:gap-4 xl:h-[600px]">
+            {images.map((item, index) => (
+              <div
+                key={item.label}
+                className={`relative ${index === 0
+                  ? 'col-span-2 row-span-2'
+                  : index === 1
+                    ? 'col-span-1 row-span-1'
+                    : index === 2
+                      ? 'col-span-1 row-span-1'
+                      : index === 3
+                        ? 'col-span-1 row-span-1'
+                        : index === 4
+                          ? 'col-span-1 row-span-1'
+                          : index === 5
+                            ? 'col-span-1 row-span-1'
+                            : index === 6
+                              ? 'col-span-1 row-span-1'
+                              : index === 7
+                                ? 'col-span-1 row-span-1'
+                                : 'col-span-1 row-span-1'
+                  }`}
+              >
+                {index === 1 && (
+                  <button
+                    className="absolute w-[140px] h-[42px] bg-white rounded-sm text-xs cursor-pointer z-10 top-72 -left-[572px]"
+                    type="button"
+                  >
+                    PRÉ LANÇAMENTO
+                  </button>
+                )}
+                <Image
+                  className="w-full h-full object-cover rounded-sm"
+                  src={item.src}
+                  alt="images"
+                  width={index === 0 ? 620 : 310}
+                  height={index === 0 ? 400 : 200}
+                />
+                <p className="absolute bottom-4 left-4 text-base text-white font-medium">{item.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {images.length > initialCount && (
+            <div className="flex-center mt-10 xl:hidden">
+              <button
+                onClick={showAllImages}
+                className="w-44 h-11 font-medium rounded-sm border-2 border-[#9F9F9F] text-[#A0A0A0] text-sm"
+              >
+                {showAll ? 'Ver Menos' : `CARREGAR MAIS`}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
