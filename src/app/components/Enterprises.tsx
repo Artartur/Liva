@@ -1,12 +1,62 @@
 'use client';
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Enterprises() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+
+  const images = [
+    {
+      src: "/1.png",
+      label: 'HORIZONTE RESIDENCE',
+    },
+    {
+      src: '/2.png',
+      label: 'ONE TOWER',
+    },
+    {
+      src: '/3.png',
+      label: 'INFINITY COAST',
+    },
+    {
+      src: '/4.png',
+      label: 'SKYLINE TOWER'
+    },
+    {
+      src: '/5.png',
+      label: 'BLUE COST TOWER',
+    },
+    {
+      src: '/6.png',
+      label: 'GRAND PLACE TOWER',
+    },
+    {
+      src: '/7.png',
+      label: 'IMPERIUM TOWER',
+    },
+    {
+      src: '/8.png',
+      label: 'GRANDE PLACE TOWER'
+    },
+    {
+      src: '/9.png',
+      label: 'TITANIUM TOWER',
+    },
+  ]
+
+  const initialCount = 4;
+
+  const imagesToShow = showAll ? images : images.slice(0, initialCount);
+
+  const showAllImages = () => {
+    setShowAll(!showAll);
+  };
+
   return (
     <section
       id="enterprises"
-      className="px-5 py-14 space-y-5"
+      className="px-5 pt-14 pb-10 space-y-5"
     >
       <h2 className="font-light">
         Confira todos os <br />
@@ -39,8 +89,41 @@ export default function Enterprises() {
           <span>FILTROS</span>
         </button>
       </div>
-      <div className="col">
-
+      <div>
+        <div className="space-y-6">
+          {imagesToShow.map((item, index) => (
+            <div
+              key={item.label}
+            >
+              {index === 1 && (
+                <button
+                  className="absolute w-[140px] h-[42px] bg-white rounded-sm text-xs -mt-[166px] ms-6 cursor-pointer"
+                  type="button"
+                >
+                  PRÉ LANÇAMENTO
+                </button>
+              )}
+              <Image
+                className="w-full rounded-sm"
+                src={item.src}
+                alt="images"
+                width={310}
+                height={0}
+              />
+              <p className="absolute text-base text-white font-medium -mt-22 ms-6">{item.label}</p>
+            </div>
+          ))}
+        </div>
+        {images.length > initialCount && (
+          <div className="flex-center mt-10">
+            <button
+              onClick={showAllImages}
+              className="w-44 h-11 font-medium rounded-sm border-2 border-[#9F9F9F] text-[#A0A0A0] text-sm"
+            >
+              {showAll ? 'Ver Menos' : `CARREGAR MAIS`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
