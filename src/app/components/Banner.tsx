@@ -17,8 +17,8 @@ export default function Banner() {
   };
 
   return (
-    <div className="relative max-w-4xl mx-auto bg-gray-100 overflow-hidden">
-      <div className="relative h-[424px] overflow-hidden">
+    <div className="relative max-w-4xl mx-auto bg-gray-100 overflow-hidden xl:max-w-full">
+      <div className="relative h-[424px] overflow-hidden xl:h-[751px]">
         {images.map((image, index) => (
           <div
             key={index}
@@ -26,13 +26,12 @@ export default function Banner() {
               index < currentSlide ? '-translate-x-full' : 'translate-x-full'
               }`}
           >
-
-            <div className="absolute top-20 px-5 text-white space-y-4 z-10">
-              <small className="font-medium">PRÉ LANÇAMENTO</small>
-              <h1 className="my-4 text-[32px]">Barra View</h1>
-              <small className="text-black font-medium bg-primary-400 p-2 rounded-sm">Apartamento com 3 dormitórios sendo 1 suíte</small>
+            <div className="absolute top-20 px-5 text-white space-y-4 z-10 xl:top-56 xl:left-44">
+              <small className="font-medium xl:text-sm xl:-mb-10">PRÉ LANÇAMENTO</small>
+              <h1 className="my-4 text-[32px] xl:text-[80px]">Barra View</h1>
+              <small className="text-black font-medium bg-primary-400 p-2 rounded-sm xl:text-lg">Apartamento com 3 dormitórios sendo 1 suíte</small>
             </div>
-            <div className="absolute flex-center bottom-36 h-11 w-32 ms-5 z-10">
+            <div className="absolute flex-center bottom-36 h-11 w-32 ms-5 z-10 xl:left-44 xl:top-[450px]">
               <button className="full-size border-2 text-sm text-white font-medium rounded-sm hover:bg-white hover:text-black hover:border-none">
                 SAIBA MAIS
               </button>
@@ -49,7 +48,7 @@ export default function Banner() {
       </div>
 
       <button
-        className="absolute row justify-center items-center bottom-0 left-5 p-2 w-16 h-16 bg-black/60 cursor-pointer"
+        className="absolute row justify-center items-center bottom-0 left-5 p-2 w-16 h-16 bg-black/60 cursor-pointer xl:top-1/2 xl:left-0 xl:right-auto xl:-translate-y-1/2"
         aria-label="Imagem anterior"
         onClick={goToPrevious}
       >
@@ -65,7 +64,7 @@ export default function Banner() {
 
       <button
         onClick={goToNext}
-        className="absolute flex-center bottom-0 left-[84px] p-2 w-16 h-16 bg-black cursor-pointer"
+        className="absolute flex-center bottom-0 left-[84px] p-2 w-16 h-16 bg-black cursor-pointer xl:top-1/2 xl:right-0 xl:left-auto xl:-translate-y-1/2"
         aria-label="Próxima imagem"
       >
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
