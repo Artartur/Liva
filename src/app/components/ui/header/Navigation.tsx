@@ -1,6 +1,6 @@
 import { navItems } from "@/app/utils/routes";
 
-export default function Navigation() {
+export default function Navigation({ navClassName, ulClassName }: { navClassName: string; ulClassName: string }) {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,8 +12,8 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="hidden xl:flex">
-      <ul className="row space-x-8">
+    <nav className={navClassName}>
+      <ul className={ulClassName}>
         {navItems.map((item) => (
           <li key={item.id}>
             <button

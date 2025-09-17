@@ -35,7 +35,10 @@ export default function Header() {
             alt="logo da liva"
           />
 
-          <Navigation />
+          <Navigation
+            navClassName="hidden xl:flex"
+            ulClassName="row space-x-8"
+          />
 
           <SocialMedia />
 
