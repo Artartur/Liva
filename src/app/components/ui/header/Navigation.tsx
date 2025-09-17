@@ -18,7 +18,8 @@ export default function Navigation() {
           <li key={item.id}>
             <button
               onClick={() => scrollToSection(item.id)}
-              className="hover:text-gray-300 cursor-pointer"
+              className="hover:text-primary cursor-pointer text-sm font-medium"
+              type="button"
             >
               {item.label}
             </button>
