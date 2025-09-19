@@ -30,10 +30,11 @@ export default function Sidebar({ closeSidebar }: { closeSidebar: () => void }) 
         </div>
       </nav>
 
-      <div className="absolute flex-center h-[84px] w-full bg-[#F2F2F2] bottom-0 text-xs xl:hidden">
+      <div className="absolute flex-center h-[84px] w-full bg-[#F2F2F2] bottom-0 left-0 text-xs xl:hidden">
         <WhatsappButton
           height="46"
           width="311"
+          style={{ width: '80%' }}
         />
       </div>
     </aside>

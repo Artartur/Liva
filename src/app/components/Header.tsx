@@ -5,7 +5,7 @@ import Image from "next/image"
 import Navigation from "./ui/header/Navigation";
 import { SocialMedia } from "./ui/header/SocialMedia";
 import Sidebar from "./ui/header/Sidebar";
-import { MenuButton } from "./ui/utils/Buttons";
+import { MenuButton, WhatsappButton } from "./ui/utils/Buttons";
 import { isClient } from "../utils/isClient";
 
 export default function Header() {
